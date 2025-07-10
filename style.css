@@ -1,0 +1,538 @@
+@font-face {
+  font-family: "DM Sans Bold";
+  src: url("./assets/fonts/DM_Sans/static/DMSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "DM Sans SemiBold";
+  src: url("./assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "DM Sans Regular";
+  src: url("./assets/fonts/DM_Sans/static/DMSans-Regular.ttf");
+}
+
+:root {
+  /* TYPOGRAPHY */
+
+  --font-family-bold: "DM Sans Bold", "sans-serif";
+  --font-family-semibold: "DM Sans SemiBold", "sans-serif";
+  --font-family-regular: "DM Sans Regular", "sans-serif";
+  --font-size-preset-1: 4rem;
+  --font-size-preset-1-mobile: 2.5rem;
+  --font-size-preset-2: 1.5rem;
+  --font-size-preset-3: 1.25rem;
+  --font-size-preset-4: 1rem;
+  --line-height-preset-1: 100%;
+  --line-height-preset-2: 130%;
+  --line-height-preset-3: 140%;
+  --line-height-preset-4: 130%;
+  --letter-spacing-preset-1: -1px;
+  --letter-spacing-preset-1-mobile: -1px;
+  --letter-spacing-preset-2: -1px;
+  --letter-spacing-preset-3: -0.6px;
+  --letter-spacing-preset-4: -0.6px;
+
+  /*  COLORS  */
+  --color-neutral-900: #12131a;
+  --color-neutral-800: #21222c;
+  --color-neutral-700: #2a2b37;
+  --color-neutral-600: #404254;
+  --color-neutral-200: #e4e4ef;
+  --color-neutral-100: #f2f2f7;
+  --color-neutral-0: #fff;
+  --color-blue-400: #d3a0fa;
+  --color-blue-500: #c27cf8;
+  --color-yellow-500: #ff9f00;
+  --color-orange-500: #fe8059;
+  --color-orange-800: #da3701;
+
+  /*  SPACING */
+
+  --spacing-0: 0rem;
+  --spacing-025: 0.125rem;
+  --spacing-050: 0.25rem;
+  --spacing-075: 0.375rem;
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-250: 1.25rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-1000: 5rem;
+
+  /* Dark theme */
+
+  --bg-primary: var(--color-neutral-900);
+  --bg-secondary: var(--color-neutral-700);
+  --bg-tertiary: var(--color-neutral-600);
+  --text-primary: var(--color-neutral-0);
+  --text-secondary: var(--color-neutral-200);
+}
+
+  /* Light theme */
+  [data-theme="light"]{
+    --bg-primary: white;
+    --bg-secondary: var(--color-neutral-200);
+    --bg-tertiary: var(--color-neutral-100);
+    --text-primary: var(--color-neutral-700);
+    --text-secondary: var(--color-neutral-900);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    width: 61.875rem;
+    padding: var(--spacing-600);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  .main__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+  }
+
+  .main__header img {
+    height: 1.94rem;
+    width: auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: var(--font-family-bold);
+    font-size: var(--font-size-preset-1);
+    line-height: var(--line-height-preset-1);
+    letter-spacing: var(--letter-spacing-preset-1);
+    margin: var(--spacing-600) auto;
+  }
+
+  .textarea {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-3);
+    line-height: var(--line-height-preset-3);
+    letter-spacing: var(--letter-spacing-preset-3);
+    border: 2px solid var(--color-neutral-600);
+    border-radius: 2px;
+    border-color: var(--color-blue-400);
+    padding: 1rem;
+  }
+
+  .textarea:focus {
+    outline: none;
+    border-color: var(--color-blue-500);
+  }
+
+  .info-line {
+    display: block;
+  }
+
+  .limit-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-4);
+    line-height: var(--line-height-preset-4);
+    letter-spacing: var(--letter-spacing-preset-4);
+    color: var(--color-orange-800);
+    margin-top: var(--spacing-100);
+  }
+
+  .limit-info svg {
+    margin-right: var(--spacing-100);
+  }
+
+  .textarea__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-4);
+    line-height: var(--line-height-preset-4);
+    letter-spacing: var(--letter-spacing-preset-4);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-100);
+    margin-bottom: var(--spacing-600);
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--bg-primary);
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--text-secondary);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.4rem;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: var(--color-blue-500);
+    border-color: var(--color-blue-500);
+    background-image: url("./assets/images/icon-check.svg");
+    background-size: 0.75rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"]:hover {
+    border-color: var(--color-blue-500);
+  }
+
+  input[name="limit"] {
+    margin-left: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 3.1rem;
+    height: 1.5rem;
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-4);
+    line-height: var(--line-height-preset-4);
+    letter-spacing: var(--letter-spacing-preset-4);
+    padding-left: 0.25rem;
+    margin-left: 0.5rem;
+    border: 2px solid var(--text-primary);
+    border-radius: 0.25rem;
+    text-align: left;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-blue-500);
+  }
+
+  .counters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-200, 1rem);
+  }
+
+  .total,
+  .word,
+  .sentence {
+    display: flex;
+    height: 9.375rem;
+    padding: var(--spacing-200, 1rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-100, 0.5rem);
+    flex: 1 0 0;
+    color: var(--color-neutral-900);
+  }
+
+  .total {
+    padding: var(--spacing-200, 1rem);
+    background-image: url("./assets/images/pattern-character-count.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: var(--color-blue-400);
+    border-radius: 0.5rem;
+  }
+
+  .word {
+    padding: var(--spacing-200, 1rem);
+    background-image: url("./assets/images/pattern-word-count.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: var(--color-yellow-500);
+    border-radius: 0.5rem;
+  }
+
+  .sentence {
+    padding: var(--spacing-200, 1rem);
+    background-image: url("./assets/images/pattern-sentence-count.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: var(--color-orange-500);
+    border-radius: 0.5rem;
+  }
+
+  .total__num,
+  .words__num,
+  .sentences__num {
+    font-family: var(--font-family-bold);
+    font-size: var(--font-size-preset-1);
+    line-height: var(--line-height-preset-1);
+    letter-spacing: var(--letter-spacing-preset-1);
+    align-self: stretch;
+  }
+
+  .total h3,
+  .word h3,
+  .sentence h3 {
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-3);
+    line-height: var(--line-height-preset-3);
+    letter-spacing: var(--letter-spacing-preset-3);
+    align-self: stretch;
+  }
+
+  .letters {
+    display: none;
+  }
+
+  .density h3 {
+    align-self: stretch;
+    text-align: left;
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-2);
+    letter-spacing: var(--letter-spacing-preset-2);
+    line-height: var(--line-height-preset-2);
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .density p {
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-4);
+    line-height: var(--line-height-preset-4);
+    letter-spacing: var(--letter-spacing-preset-4);
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-100);
+    margin-bottom: 1.25rem;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+
+  .letter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-050);
+    color: var(--text-secondary);
+    font-family: var(--font-family-regular);
+    font-size: var(--font-size-preset-4);
+    line-height: var(--line-height-preset-4);
+    letter-spacing: var(--letter-spacing-preset-4);
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  .letter-char {
+    min-width: 2ch; /* fix szélesség a betűnek */
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .bar-background {
+    flex: 1;
+    background-color: var(--bg-secondary);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    margin-right: 6rem;
+  }
+
+  .bar {
+    background: var(--color-blue-500);
+    height: 0.55rem;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+  }
+
+  .letter-count {
+    text-align: right;
+    position: absolute;
+    right: 1rem;
+  }
+
+  button {
+    border: none;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family-semibold);
+    font-size: var(--font-size-preset-3);
+    line-height: var(--line-height-preset-3);
+    letter-spacing: var(--letter-spacing-preset-3);
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: var(--color-blue-500);
+  }
+
+
+@media screen and (width >= 37.5rem) and (width <= 64rem) {
+  .main, .main__header, h1, .textarea, .limit-info, .textarea__bottom, .counters {
+    max-width: 98% ;
+    padding: var(--spacing-025);
+  }
+  
+  .textarea__bottom{
+    flex-wrap: wrap;;
+  }
+
+  .textarea__bottom p{
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .counters {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-100, 0.5rem);
+   
+  }
+}
+
+ @media screen and (width < 37.5rem) {
+  :root {
+    --font-size-preset-1: var(--font-size-preset-1-mobile);
+    --letter-spacing-preset-1: var(--letter-spacing-preset-1-mobile);
+  }
+
+  body{
+    margin: var(--spacing-150) auto;
+  }
+
+   .main, .main__header, h1  {
+    max-width: 98% ;
+    padding: var(--spacing-025);
+  }
+
+  .textarea, .limit-info{
+     width: 98%;
+    margin: 0 var(--spacing-075);
+    padding: var(--spacing-050);
+  }
+   
+  .limit-value{
+    display: inline-block;
+  }
+
+  .counters {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-100, 1.5rem);
+   
+  }
+
+  .checkboxes {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-row: auto;
+    margin-left: 0;
+  }
+ 
+  .textarea__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   
+  }
+
+  .spaces{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    position: relative;
+    left: 2rem;
+  
+ }
+
+  .spaces + label{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    padding-left: 0.2rem;
+  }
+
+  .limit{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    position: relative;
+    left: 0.5rem;
+    margin-right: 0.2rem;
+   
+ }
+ 
+  .limit + label{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    padding-left: 0.2rem;
+  }
+
+  input[type="text"]{
+  grid-row: 2 / 3;
+   grid-column: 3 / 4;
+  
+  }
+
+  .textarea__bottom p{
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .total, 
+  .word,
+  .sentence{
+     width: 98%;
+    margin: 0 var(--spacing-075);
+    padding: var(--spacing-300) var(--spacing-200)  ;
+  }
+
+  input[type="checkbox"]{
+    width: 1rem;
+    height:1rem;
+  }
+
+
+
+}

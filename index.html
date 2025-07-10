@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Character counter</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main__header">
+        <img
+          src="./assets/images/logo-dark-theme.svg"
+          alt="logo-dark"
+          class="logo"
+        />
+        <img
+          src="./assets/images/icon-sun.svg"
+          alt="light-theme-icon"
+          class="theme__icon"
+        />
+      </div>
+      <h1>
+        Analyze your text<br />
+        in real-time.
+      </h1>
+      <textarea
+        class="textarea"
+        placeholder="Start typing here… (or paste your text)"
+        rows="10"
+      ></textarea>
+      <div class="info-line"></div>
+      <div class="textarea__bottom">
+        <div class="checkboxes">
+          <input type="checkbox" name="spaces" class="spaces" />
+          <label for="spaces">Exclude Spaces</label>
+          <input type="checkbox" name="limit" class="limit" />
+          <label for="limit">Set Character Limit</label>
+          <input type="text" name="limit-value" class="limit-value" />
+        </div>
+        <p>Approx. reading time: < 1 minute</p>
+      </div>
+      <div class="counters">
+        <div class="total">
+          <h2 class="total__num">0</h2>
+          <h3>Total Characters</h3>
+        </div>
+        <div class="word">
+          <h2 class="words__num">0</h2>
+          <h3>Word Count</h3>
+        </div>
+        <div class="sentence">
+          <h2 class="sentences__num">0</h2>
+          <h3>Sentence Count</h3>
+        </div>
+      </div>
+      <div class="density">
+        <h3>Letter Density</h3>
+        <p class="no-chars">
+          No characters found. Start typing to see letter density.
+        </p>
+        <ul class="letters"></ul>
+
+        <button type="button" class="see-more-btn">See more...</button>
+      </div>
+    </div>
+  </body>
+</html>
