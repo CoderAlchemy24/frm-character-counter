@@ -1,6 +1,6 @@
 # Frontend Mentor - Character counter solution
 
-This is a solution to the [Character counter challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/character-counter-znSgeWs_i6). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Character counter challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/character-counter-znSgeWs_i6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,7 +11,7 @@ This is a solution to the [Character counter challenge on Frontend Mentor](https
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
- 
+
 - [Author](#author)
 
 ## Overview
@@ -34,7 +34,6 @@ Users should be able to:
 
 ![](./character_counter_screenshot.png)
 
-
 ### Links
 
 - Solution URL: [https://github.com/CoderAlchemy24/frm-character-counter.git](https://github.com/CoderAlchemy24/frm-character-counter.git)
@@ -51,10 +50,8 @@ Users should be able to:
 
 ### What I learned
 
-- JavaScript skills  
+- JavaScript skills
 
 ## Author
 
 - Author - coderAlchemy
-
-
